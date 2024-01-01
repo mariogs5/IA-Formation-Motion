@@ -30,7 +30,7 @@ public class Slots : MonoBehaviour
             Vector3 position = ghost.transform.TransformPoint(new Vector3(pos, 0f, z));
             GameObject temp = (GameObject)Instantiate(pf, position, ghost.transform.rotation);
             temp.AddComponent<Formation>();
-            temp.GetComponent<Formation>().pos = new Vector3(pos, 0, z);
+            temp.GetComponent<Formation>().pos = new Vector3(pos, 0.5f, z);
             temp.GetComponent<Formation>().target = ghost;
             pos += 2f;
         }
